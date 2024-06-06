@@ -1,0 +1,45 @@
+2024-05-06T02:59:59.115406500255-02:59:59 **** Incremental Build of configuration Debug for project dsa ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/main.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Xilinx_project/SoC/HW_vitis_2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+000-../src/main.c: In function 'main':
+000/dsa/src/main.c27-1-1implicit declaration of function 'read_keypad' [-Wimplicit-function-declaration]1-../src/main.c:27:14: warning: implicit declaration of function 'read_keypad' [-Wimplicit-function-declaration]
+000-   27 |              read_keypad();
+000-      |              ^~~~~~~~~~~
+000/dsa/src/main.c28-1-1implicit declaration of function 'display_number' [-Wimplicit-function-declaration]1-../src/main.c:28:14: warning: implicit declaration of function 'display_number' [-Wimplicit-function-declaration]
+000-   28 |              display_number();
+000-      |              ^~~~~~~~~~~~~~
+000-../src/main.c: At top level:
+000/dsa/src/main.c72-1-1conflicting types for 'display_number'1display_number../src/main.c:72:6: warning: conflicting types for 'display_number'
+000-   72 | void display_number(){
+000-      |      ^~~~~~~~~~~~~~
+000/dsa/src/main.c28-1-1previous implicit declaration of 'display_number' was here0-../src/main.c:28:14: note: previous implicit declaration of 'display_number' was here
+000-   28 |              display_number();
+000-      |              ^~~~~~~~~~~~~~
+000/dsa/src/main.c81-1-1conflicting types for 'read_keypad'1read_keypad../src/main.c:81:6: warning: conflicting types for 'read_keypad'
+000-   81 | void read_keypad(){
+000-      |      ^~~~~~~~~~~
+000/dsa/src/main.c27-1-1previous implicit declaration of 'read_keypad' was here0-../src/main.c:27:14: note: previous implicit declaration of 'read_keypad' was here
+000-   27 |              read_keypad();
+000-      |              ^~~~~~~~~~~
+000-'Finished building: ../src/main.c'
+000-' '
+000-'Building target: dsa.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Xilinx_project/SoC/HW_vitis_2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "dsa.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: dsa.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size dsa.elf  |tee "dsa.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  78100	   2550	  22656	 103306	  1938a	dsa.elf
+000-'Finished building: dsa.elf.size'
+000-' '
+00255-
+02:59:59 Build Finished (took 619ms)
+
