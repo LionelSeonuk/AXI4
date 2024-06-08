@@ -1,5 +1,6 @@
 Design Zynq SoC with AXI Peripherals (keypad, UART, 7-segment display)
 ![image](https://github.com/LionelSeonuk/AXI4/assets/167200555/5e10a5ee-7d96-40b4-9fd6-cf567ebe1273)
+
 <7segment & keypad>
 
 ![image](https://github.com/LionelSeonuk/AXI4/assets/167200555/1fdd015f-7fb9-4893-9cbe-9cd3bfcefab0)
